@@ -121,4 +121,4 @@ for (let di of dias_agregados) {
 }
 
 // total a pagar
-alert("Sumando los días:\n\n" + contenido_dias + "\n\nRecibirás un sueldo liquido de: $" + suma_total);
+alert("Pago por día con los descuentos legales:\n\n" + contenido_dias + "\n\nRecibirás un sueldo liquido de: $" + suma_total);
