@@ -4,7 +4,7 @@ const dias = [];
 const dias_agregados = []; 
 
 class Dia {
-    constructor (id, nombre, precio, stock) {
+    constructor (id, nombre, precio) {
         this.id = id;
         this.nombre = nombre;
         this.precio = precio;
@@ -98,10 +98,13 @@ while (cargarDia) {
     let contenido_dias = recorrerDiasAgregados();
     //indica el id del día
     let id_dia = parseInt(prompt("Vas a sumar estos días, inserta un número si deseas eliminarlo: (0 - Salir)\n" + contenido_dias));
-    if(id_dia > 0) {
+    if(id_dia >= 0) { // si el numero ingresado es mayor a 0 (1, 2, 3) se elimina ese dia
        eliminarDia(id_dia);
-    } else {
+    } else { // si el número ingresado no es mayor a 0
         alert("Número no válido, intente nuevamente");
+    }
+    if(id_dia === 0) {
+        break;
     }
     
     //pregunta si desea eliminar otro día
